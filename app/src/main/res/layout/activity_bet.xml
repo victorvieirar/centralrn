@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.BetActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bet_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/schedule_layout">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/list_schedule">
+
+
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/types_layout"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_yellow_btn"
+                        android:text="grupo"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_group"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_blue_btn"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:text="milhar"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_chiliad"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_standard_btn"
+                        android:text="centena"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_hundred"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_red_btn"
+                        android:text="dezena"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_ten"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_yellow_btn"
+                        android:text="milhar e centena"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_chiliad_hundred"/>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/style_layout"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_yellow_btn"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:text="1º prêmio"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_single_bet"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_blue_btn"
+                        android:text="1º ao 5º prêmio"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_5_first"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_standard_btn"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:text="1º ao 10º prêmio"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_5_last"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_red_btn"
+                        android:text="2º ao 5º prêmio"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_2_5"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_yellow_btn"
+                        android:text="2º ao 5º prêmio"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/btn_2_10"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:background="@drawable/bg_blue_btn"
+                        android:text="6º ao 10º prêmio"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone"
+                        android:id="@+id/btn_6_10"/>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </FrameLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

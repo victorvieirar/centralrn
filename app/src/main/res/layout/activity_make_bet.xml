@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.MakeBetActivity">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:text="sua(s) aposta(s):"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textSize="20dp"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:id="@+id/main_layout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:id="@+id/bets_panel"></LinearLayout>
+                    </HorizontalScrollView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="110dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:inputType="number"
+                        android:hint="Digite o número"
+                        android:background="@drawable/bg_standard_et"
+                        android:id="@+id/bet_setter"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@id/bet_setter"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:inputType="numberDecimal"
+                        android:hint="R$ 0,00"
+                        android:background="@drawable/bg_standard_et"
+                        android:id="@+id/bet_value"/>
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/bet_value"
+                        android:textOn="total"
+                        android:textOff="em cada"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/bg_standard_toggle"
+                        android:id="@+id/btn_value_division"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@id/btn_value_division"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:drawableEnd="@drawable/ic_angle_right"
+                        android:text="Confirmar"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/bg_standard_btn"
+                        android:id="@+id/btn_confirm"/>
+
+                </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            android:id="@+id/gift_chiliad">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_stars_24dp"
+                android:tint="@android:color/holo_orange_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Você ganhou\numa milhar de brinde"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="15dp"
+                android:hint="Digite sua milhar"
+                android:background="@drawable/bg_standard_et"
+                android:id="@+id/gift_chiliad_setter"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Confirmar"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/ic_angle_right"
+                android:drawableTint="@android:color/black"
+                android:background="@drawable/bg_yellow_btn"
+                android:id="@+id/btn_confirm_gift_chiliad"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/print_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="100dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_check_circle_24dp"
+                    android:tint="@color/colorPrimary"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parabéns!\nAposta realizada"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Imprimir"
+                android:textColor="@android:color/white"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/ic_print_24dp"
+                android:background="@drawable/bg_standard_btn"
+                android:id="@+id/btn_print"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

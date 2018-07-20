@@ -2,22 +2,47 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.atwork.centralrn">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/NoActionBar">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.MainActivity">
+            android:name=".view.activities.MainActivity"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity"></activity>
+        <activity
+            android:name=".view.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".view.activities.ResultsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.activities.DetailResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.activities.BetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.MakeBetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.ConfirmResultActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".view.activities.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -37,9 +37,11 @@
             android:layout_height="60dp"
             android:layout_margin="20dp"
             android:padding="15dp"
-            android:text="Código da Banca"
+            android:hint="Código da Banca"
+            android:inputType="number"
             android:layout_above="@id/btn_enter"
-            android:background="@drawable/bg_standard_et" />
+            android:background="@drawable/bg_standard_et"
+            android:id="@+id/contributor_cod"/>
 
 
     </RelativeLayout>

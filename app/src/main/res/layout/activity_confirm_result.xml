@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activities.ConfirmResultActivity">
+
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textOn="Hoje"
+        android:textOff="Outro dia"
+        android:textColor="@android:color/white"
+        android:checked="true"
+        android:background="@drawable/bg_standard_toggle"
+        android:id="@+id/toggle_date"/>
+
+    <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:theme="@android:style/Widget.DatePicker"
+        android:visibility="gone"
+        android:id="@+id/date_picker"></DatePicker>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/spinner_date">
+    </Spinner>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:hint="Pule"
+        android:inputType="number"
+        android:background="@drawable/bg_standard_et"
+        android:id="@+id/ticket_value"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:text="Conferir"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:drawableEnd="@drawable/ic_angle_right"
+        android:background="@drawable/bg_standard_btn"
+        android:id="@+id/btn_confirm_result" />
+
+</LinearLayout>
